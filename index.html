@@ -18,12 +18,6 @@
      * {
         font-family: 'Noto Serif KR', serif;
         }
-<!--        * {-->
-<!--            font-family: 'Black Han Sans', sans-serif;-->
-<!--            font-family: 'East Sea Dokdo', cursive;-->
-<!--            font-family: 'Hahmlet', serif;-->
-<!--            font-family: 'Noto Sans KR', sans-serif;-->
-<!--        }-->
         body {
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://pbs.twimg.com/media/Fjx_kxlWYAAM34v.jpg');
             background-position: center auto;
@@ -95,42 +89,7 @@
         }
     </style>
     <script>
-                $(document).ready(function () {
-                    $.ajax({
-                        url: "/api/main",
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            var otts = data.otts;
-                            for (var i = 0; i < otts.length; i++) {
-                                var ott = otts[i];
-                                var div = document.createElement("div");
-                                div.className = ott.ott_name;
-
-                                var img = document.createElement("img");
-                                img.src = ott.image_url;
-                                div.appendChild(img);
-
-                                var rank = document.createElement("p");
-                                rank.innerText = ott.rank;
-                                div.appendChild(rank);
-
-                                var title = document.createElement("p");
-                                title.innerText = ott.title;
-                                div.appendChild(title);
-
-                                var ott_name = document.createElement("p");
-                                ott_name.innerText = ott.ott_name;
-                                div.appendChild(ott_name);
-
-                                document.getElementById("ott_data").appendChild(div);
-                            }
-                        },
-                        error: function (error) {
-                            console.log(error)
-                }
-            });
-        });
+                
     </script>
 </head>
 <body>
